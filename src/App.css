@@ -1,0 +1,26 @@
+/* A general class for all main sections of your portfolio */
+.section {
+  /* Use min-height to ensure the section fills the screen, 
+     but can grow if content is larger. */
+  min-height: 100vh;
+
+  /* We add more padding at the top to make sure content isn't hidden by the sticky navbar */
+  padding: 5rem 2rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+/* We can define different background colors for alternating sections */
+#home {
+  background-color: #ffffff;
+}
+
+#about {
+  background-color: #f4f4f4;
+}
+
+/* Add more styles for other sections as you build them */
