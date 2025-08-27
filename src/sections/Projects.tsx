@@ -1,8 +1,159 @@
+import SectionHeading from "../components/SectionHeading";
+
+type Project = {
+  title: string;
+  subtitle?: string;
+  date?: string;
+  img: string;
+  tags?: string[];
+  href?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "Annahal Shop",
+    subtitle: "Next.js Storefront",
+    date: "2024",
+    img: "/cover/shopping.webp",
+    tags: ["Next.js", "React", "State", "Responsive"],
+    href: "https://github.com/nikmahla/annahal-shop",
+  },
+  {
+    title: "Employee Dashboard",
+    subtitle: "CRUD • Modals • Pagination",
+    date: "2024",
+    img: "/cover/dashboard.webp",
+    tags: ["REST API", "Tables", "State"],
+    href: "https://github.com/nikmahla/Employee-Dashboard",
+  },
+  {
+    title: "Character Explorer",
+    subtitle: "Search • Filters • TS",
+    date: "2024",
+    img: "/cover/charecter.webp",
+    tags: ["TypeScript", "API", "React"],
+    href: "https://github.com/nikmahla/CharacterExplorer",
+  },
+  {
+    title: "Credit Card",
+    subtitle: "Form UX • Live Preview",
+    date: "2024",
+    img: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop",
+    tags: ["Validation", "Hooks", "UI"],
+    href: "https://github.com/nikmahla/Credit-Card",
+  },
+  {
+    title: "Company Template",
+    subtitle: "Responsive Website",
+    date: "2024",
+    img: "/cover/company.webp",
+    tags: ["HTML", "CSS", "Bootstrap"],
+    href: "https://github.com/nikmahla/WebTemplate-Company",
+  },
+];
+
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 min-h-screen py-12">
-      <h1 className="text-3xl font-bold">Projects</h1>
-      <div className="mt-6 h-40 rounded-2xl border border-white/10 bg-white/5"></div>
+    <section
+      id="projects"
+      aria-label="Projects"
+      className="relative z-0 scroll-mt-24 px-4 md:pr-24 lg:pr-32 py-16 md:py-24"
+    >
+      <div className="mx-auto w-full max-w-4xl">
+        <SectionHeading
+          title="Projects"
+          showDivider
+          dividerThickness={3}
+          titleClassName="text-4xl sm:text-5xl md:text-6xl"
+        />
+
+        <p className="mt-3 text-white/60 max-w-prose">
+          Selected work — visual, responsive, and focused on real user
+          experience.
+        </p>
+
+        {/* one card per row */}
+        <div className="mt-8 space-y-6">
+          {projects.map((p) => (
+            <article
+              key={p.title}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_8px_28px_-18px_rgba(0,0,0,0.6)]"
+            >
+              <figure className="relative">
+                {/* Smaller image height + consistent fit */}
+                <img
+                  src={p.img}
+                  alt={`${p.title} — project screenshot`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-48 sm:h-56 md:h-90 object-cover object-center transition-transform duration-500 group-hover:scale-[1.015]"
+                />
+
+                {/* Overlay gradient for readability */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+
+                {/* Info panel */}
+                <div className="absolute inset-x-3 sm:inset-x-5 bottom-3 sm:bottom-5">
+                  <div
+                    className="flex flex-wrap items-end sm:items-center gap-3 rounded-2xl sm:rounded-2xl
+                    border border-white/10 bg-black/45 backdrop-blur-md px-4 py-3 sm:px-5 sm:py-4
+                    shadow-[0_10px_30px_-20px_rgba(0,0,0,0.8)]"
+                  >
+                    {/* Left: text */}
+                    <div className="min-w-0">
+                      {p.subtitle && (
+                        <div className="text-[11px] font-medium text-white/70">
+                          {p.subtitle}
+                        </div>
+                      )}
+                      {/* Title: orange → white */}
+                      <h3 className="mt-0.5 text-lg sm:text-xl font-semibold tracking-tight text-white">
+                        {p.title}
+                      </h3>
+
+                      <div className="mt-2 flex flex-wrap items-center gap-2">
+                        {p.date && (
+                          <span className="text-[11px] rounded-full bg-white/10 px-2.5 py-0.5 text-white/85">
+                            {p.date}
+                          </span>
+                        )}
+                        {p.tags?.slice(0, 2).map((t) => (
+                          <span
+                            key={t}
+                            className="text-[11px] rounded-full border border-white/15 bg-black/30 px-2.5 py-0.5 text-white/75"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right: single CTA (white styling, smaller) */}
+                    {p.href && (
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-auto grid h-10 w-10 place-items-center rounded-xl border
+                                   border-white/60 bg-black/30 hover:bg-black/50 transition
+                                   focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        aria-label={`Open ${p.title}`}
+                        title="Open project"
+                      >
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </figure>
+
+              {/* Removed the second absolute CTA to avoid “two arrows” */}
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

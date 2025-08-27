@@ -36,7 +36,7 @@ export default function ProfileCard() {
         <div className="rounded-xl p-2">
           <img
             src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=640&auto=format&fit=crop"
-            alt="Fatemeh Nikookar portrait"
+            alt="Fatemeh Nikookar-mahla nikookar-frontend developer"
             className="h-52 w-full rounded-xl object-cover"
           />
         </div>
@@ -46,10 +46,10 @@ export default function ProfileCard() {
           Fatemeh Nikookar
         </h2>
 
-        {/* role */}
+{/*         
         <p className="mt-1 text-center text-sm text-gray-400">
           Frontend Developer (React)
-        </p>
+        </p> */}
 
         {/* contact details */}
         <div className="mt-4 space-y-1 text-center text-sm">

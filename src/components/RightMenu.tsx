@@ -6,8 +6,8 @@ export default function RightMenu() {
   const { active, setActive, scrollTo } = useActiveSection(hrefs);
 
   return (
-    <aside className="hidden md:block fixed right-4 top-1/4 z-50 pointer-events-none">
-      <nav className="pointer-events-auto flex w-14 h-[500px] flex-col items-center justify-center gap-4 rounded-full bg-black/90 shadow-lg">
+    <aside className="hidden md:block fixed right-4 top-1/6 z-50 pointer-events-none">
+      <nav className="pointer-events-auto flex w-14 h-100 flex-col items-center justify-center gap-8 rounded-full bg-black/90 shadow-lg">
         {MENU.map(({ href, Icon, label }) => (
           <a
             key={href}
