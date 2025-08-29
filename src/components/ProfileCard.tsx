@@ -14,14 +14,14 @@ export default function ProfileCard() {
 
   return (
     <aside
-      className="
+      className=" mt-16 sm:mt-0
         mx-auto w-full max-w-md px-4
         md:fixed md:left-4 md:top-7 md:w-80 md:px-0
         z-40
       "
     >
-<div
-  className="
+      <div
+        className="
     rounded-3xl border border-white/10
     bg-gradient-to-b from-[#2a2a2d] via-[#1f1f21] to-[#161618]
     backdrop-blur-md
@@ -29,16 +29,20 @@ export default function ProfileCard() {
     shadow-[inset_4px_4px_10px_rgba(0,0,0,0.6),inset_-4px_-4px_10px_rgba(255,255,255,0.08)]
     md:h-[560px]
   "
->
+      >
 
 
         {/* avatar */}
-        <div className="rounded-xl p-2">
+        <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10">
+          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0d0f12] via-[#16181c] to-[#0d0f12]" />
+
           <img
-            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=640&auto=format&fit=crop"
-            alt="Fatemeh Nikookar-mahla nikookar-frontend developer"
-            className="h-52 w-full rounded-xl object-cover"
+            src="public/ppp.png" // use your path
+            alt="Fatemeh Nikookar portrait"
+            className="h-52 w-full object-cover"
           />
+
+
         </div>
 
         {/* name */}
@@ -46,7 +50,7 @@ export default function ProfileCard() {
           Fatemeh Nikookar
         </h2>
 
-{/*         
+        {/*         
         <p className="mt-1 text-center text-sm text-gray-400">
           Frontend Developer (React)
         </p> */}
@@ -55,49 +59,46 @@ export default function ProfileCard() {
         <div className="mt-4 space-y-1 text-center text-sm">
           <p className="inline-flex items-center gap-2 text-gray-300">
             <EnvelopeIcon className="h-4 w-4" />
-            fatemehnikookar@gmail.com
+            fatemehnikookar2020@gmail.com
           </p>
-          <p className="inline-flex items-center gap-2 text-gray-500">
-            <MapPinIcon className="h-4 w-4" />
-            Based in Tehran, IR
-          </p>
+
         </div>
 
-       {/* socials */}
-<div className="mt-5 flex justify-center gap-4">
-  <a
-    href="https://www.linkedin.com/in/fatemeh-nikookar-b00a28291/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex h-10 w-10 items-center justify-center rounded-full 
+        {/* socials */}
+        <div className="mt-5 flex justify-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/fatemeh-nikookar-b00a28291/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full 
                bg-black/40 text-gray-200    
                hover:bg-black/80 transition"
-  >
-    <FaLinkedin  />
-  </a>
+          >
+            <FaLinkedin />
+          </a>
 
-  <a
-    href="https://github.com/nikmahla"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex h-10 w-10 items-center justify-center rounded-full 
+          <a
+            href="https://github.com/nikmahla"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full 
                bg-black/40 text-gray-200 
-               hover:bg-black/80 transition"
-  >
-    <FaGithub  />
-  </a>
+               hover:bg-black/80  transition"
+          >
+            <FaGithub />
+          </a>
 
-  <a
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex h-10 w-10 items-center justify-center rounded-full 
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full 
                bg-black/40 text-gray-200
-               hover:bg-black/80 transition"
-  >
-    <FaTelegram  />
-  </a>
-</div>
+               hover:bg-black/80 transition  "
+          >
+            <FaTelegram />
+          </a>
+        </div>
 
 
         {/* action */}
@@ -105,11 +106,39 @@ export default function ProfileCard() {
           <a
             href="#contact"
             onClick={goContact}
-            className="block rounded-2xl bg-white px-4 py-3 text-center text-sm font-medium text-black hover:bg-white/90"
+            className="
+      group relative flex items-center justify-between
+      w-full rounded-2xl border border-white/15
+      bg-black/40 px-4 py-3
+      text-sm text-white
+      shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)]
+      transition
+      hover:bg-black/55 hover:border-white/25
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70
+    "
+            aria-label="Go to contact section"
           >
-            Contact Me
+            <span className="pl-1">Get Started</span>
+
+            {/* right round arrow */}
+            <span
+              className="
+        ml-3 grid h-10 w-10 place-items-center rounded-full
+        bg-white text-black
+        shadow-[0_6px_18px_-6px_rgba(255,255,255,0.35)]
+        transition-transform duration-200
+        group-hover:translate-x-0.5
+      "
+              aria-hidden="true"
+            >
+              {/* arrow icon */}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
           </a>
         </div>
+
       </div>
     </aside>
   );

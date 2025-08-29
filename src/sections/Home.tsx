@@ -1,18 +1,10 @@
 export default function Home() {
   return (
-    <section
-      id="home"
-      aria-label="About me"
-      className="
-        scroll-mt-24
-        /* one screen tall: 100vh - fixed header (~3.5rem) - main py-10 (5rem) */
-        min-h-[calc(100vh-3.5rem-5rem)]
-        grid place-items-center
-        px-4 md:pr-24 lg:pr-32
-        py-10
-        relative z-0
-      "
-    >
+  <section
+  id="home"
+  aria-label="About me"
+  className="min-h-[calc(100vh-3.5rem-5rem)] grid place-items-center px-4 md:pr-24 lg:pr-32 py-10 relative z-0"
+>
       <div className="w-full max-w-[46rem]">
         <h1 className="font-extrabold leading-[0.9] tracking-tight uppercase">
           <span className="sr-only">

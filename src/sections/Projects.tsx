@@ -13,52 +13,46 @@ const projects: Project[] = [
   {
     title: "Annahal Shop",
     subtitle: "Next.js Storefront",
-    date: "2024",
     img: "/cover/shopping.webp",
-    tags: ["Next.js", "React", "State", "Responsive"],
+    tags: ["Next.js", "React", "Zustand", "Responsive"],
     href: "https://github.com/nikmahla/annahal-shop",
   },
   {
     title: "Employee Dashboard",
     subtitle: "CRUD • Modals • Pagination",
-    date: "2024",
     img: "/cover/dashboard.webp",
-    tags: ["REST API", "Tables", "State"],
+    tags: ["REST API", "Tables", "State", "JavaScript"],
     href: "https://github.com/nikmahla/Employee-Dashboard",
   },
   {
     title: "Character Explorer",
     subtitle: "Search • Filters • TS",
-    date: "2024",
     img: "/cover/charecter.webp",
-    tags: ["TypeScript", "API", "React"],
+    tags: ["TypeScript", "API", "React", "Tailwind CSS"],
     href: "https://github.com/nikmahla/CharacterExplorer",
   },
   {
     title: "Credit Card",
     subtitle: "Form UX • Live Preview",
-    date: "2024",
-    img: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Validation", "Hooks", "UI"],
+    img: "public/cover/credit02.webp",
+    tags: ["HTML", "Tailwind CSS", "JavaScript"],
     href: "https://github.com/nikmahla/Credit-Card",
   },
   {
     title: "Company Template",
     subtitle: "Responsive Website",
-    date: "2024",
     img: "/cover/company.webp",
-    tags: ["HTML", "CSS", "Bootstrap"],
+    tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     href: "https://github.com/nikmahla/WebTemplate-Company",
   },
 ];
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      aria-label="Projects"
-      className="relative z-0 scroll-mt-24 px-4 md:pr-24 lg:pr-32 py-16 md:py-24"
-    >
+  <section id="projects"
+  aria-label="Projects"
+  className="relative z-0 scroll-mt-0 px-4 md:pr-24 lg:pr-32 py-16 md:py-24"
+>
       <div className="mx-auto w-full max-w-4xl">
         <SectionHeading
           title="Projects"
@@ -66,30 +60,24 @@ export default function Projects() {
           dividerThickness={3}
           titleClassName="text-4xl sm:text-5xl md:text-6xl"
         />
-
         <p className="mt-3 text-white/60 max-w-prose">
           Selected work — visual, responsive, and focused on real user
           experience.
         </p>
-
-        {/* one card per row */}
-        <div className="mt-8 space-y-6">
+        <div className="mt-4 space-y-6">
           {projects.map((p) => (
             <article
               key={p.title}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_8px_28px_-18px_rgba(0,0,0,0.6)]"
             >
               <figure className="relative">
-                {/* Smaller image height + consistent fit */}
                 <img
                   src={p.img}
                   alt={`${p.title} — project screenshot`}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-48 sm:h-56 md:h-90 object-cover object-center transition-transform duration-500 group-hover:scale-[1.015]"
+                  className="w-full h-60 sm:h-76 md:h-90 object-cover object-center transition-transform duration-500 group-hover:scale-[1.015]"
                 />
-
-                {/* Overlay gradient for readability */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
                 {/* Info panel */}
@@ -102,33 +90,31 @@ export default function Projects() {
                     {/* Left: text */}
                     <div className="min-w-0">
                       {p.subtitle && (
-                        <div className="text-[11px] font-medium text-white/70">
+                        <div className="hidden sm:block text-[12px] font-medium text-white/70">
                           {p.subtitle}
                         </div>
                       )}
-                      {/* Title: orange → white */}
-                      <h3 className="mt-0.5 text-lg sm:text-xl font-semibold tracking-tight text-white">
+
+                      <h3 className="mt-0.5 text-lg sm:text-xl  font-semibold tracking-tight text-white">
                         {p.title}
                       </h3>
 
                       <div className="mt-2 flex flex-wrap items-center gap-2">
                         {p.date && (
-                          <span className="text-[11px] rounded-full bg-white/10 px-2.5 py-0.5 text-white/85">
+                          <span className="text-[12px] rounded-full bg-white/10 px-2.5 py-0.5 text-white/85">
                             {p.date}
                           </span>
                         )}
-                        {p.tags?.slice(0, 2).map((t) => (
+                        {p.tags?.slice(0, 4).map((t) => (
                           <span
                             key={t}
-                            className="text-[11px] rounded-full border border-white/15 bg-black/30 px-2.5 py-0.5 text-white/75"
+                            className="text-[12px] rounded-full border border-white/15 bg-black/30 px-2.5 py-0.5 text-white/75"
                           >
                             {t}
                           </span>
                         ))}
                       </div>
                     </div>
-
-                    {/* Right: single CTA (white styling, smaller) */}
                     {p.href && (
                       <a
                         href={p.href}
@@ -148,8 +134,6 @@ export default function Projects() {
                   </div>
                 </div>
               </figure>
-
-              {/* Removed the second absolute CTA to avoid “two arrows” */}
             </article>
           ))}
         </div>

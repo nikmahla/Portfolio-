@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 
-/** Observe sections by anchor hrefs (like "#home") and return active id */
 export function useActiveSection(hrefs: string[]) {
   const [active, setActive] = useState(hrefs[0] ?? "");
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -33,7 +32,13 @@ export function useActiveSection(hrefs: string[]) {
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      // Get computed scroll-margin-top (in px)
+      const style = window.getComputedStyle(el);
+      const scrollMarginTop = parseInt(style.scrollMarginTop) || 0;
+      const y = el.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
     history.replaceState(null, "", href);
   };
 

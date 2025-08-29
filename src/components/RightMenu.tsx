@@ -12,11 +12,11 @@ export default function RightMenu() {
           <a
             key={href}
             href={href}
-            onClick={(e) => {
-              e.preventDefault();
-              setActive(href);       // immediate highlight
-              scrollTo(href);        // smooth scroll + update URL
-            }}
+         onClick={(e) => {
+  e.preventDefault();  // <-- THIS LINE STOPS NATIVE BROWSER SCROLLING
+  setActive(href);
+  scrollTo(href);      // <-- THIS CUSTOM FUNCTION DOESN'T RESPECT CSS OFFSETS
+}}
             className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors
               ${active === href ? "bg-white text-black" : "text-gray-300 hover:bg-gray-500"}`}
             aria-label={label}
