@@ -31,8 +31,10 @@ This is where I share my favorite projects, my skills, and a bit about myself as
 
 ## 📸 Sneak Peek
 
-![Portfolio Screenshot](./public/cover/portfolio-preview.webp)
-
+![Portfolio Screenshot]![Image](https://github.com/user-attachments/assets/b2d55ecd-0e0c-4859-b7ae-0fd443ed5d65)
+![Image](https://github.com/user-attachments/assets/91f49b93-da26-4389-a561-45e877dc9b73)
+![Image](https://github.com/user-attachments/assets/de2a406f-6c6a-4750-9ce9-593f58ce3022)
+![Image](https://github.com/user-attachments/assets/b6b89c80-6735-4c35-9c83-3f33d698ed0f)
 ---
 
 ## 🏃‍♀️ Run It Locally
