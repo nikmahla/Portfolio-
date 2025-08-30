@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# 👋 Hi, I’m Fatemeh Nikookar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio!  
+This is where I share my favorite projects, my skills, and a bit about myself as a front-end developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 What’s Inside?
 
-## Expanding the ESLint configuration
+- **Projects:** Real-world apps I’ve built with React, Next.js, TypeScript, and more.
+- **Skills:** The tools and tech I use every day.
+- **Contact:** Want to chat or collaborate? My inbox is open!
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- React & Next.js
+- TypeScript & JavaScript
+- Tailwind CSS
+- Zustand, Redux Toolkit
+- REST APIs
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📸 Sneak Peek
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![Portfolio Screenshot](./public/cover/portfolio-preview.webp)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🏃‍♀️ Run It Locally
+
+1. **Clone this repo:**
+   ```sh
+   git clone https://github.com/nikmahla/Portfolio-.git
+   cd Portfolio-
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Start the dev server:**
+   ```sh
+   npm run dev
+   ```
+   Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📬 Let’s Connect!
+
+- [LinkedIn](https://www.linkedin.com/in/fatemeh-nikookar-b00a28291/)
+- [GitHub](https://github.com/nikmahla)
+- [Telegram](https://t.me/Fatemeh_Nikookar)
+- Email: fatemehnikookar2020@gmail.com
+
+---
+
+Thanks for stopping by!  
+If you like what you see or want to work together, just reach out.  
+Happy coding! 🌱
