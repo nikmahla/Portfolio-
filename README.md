@@ -5,6 +5,12 @@ This is where I share my favorite projects, my skills, and a bit about myself as
 
 ---
 
+## 🌐 Live Demo
+
+👉 [**View Portfolio Live on Vercel**](https://portfolio-mu-sable-67.vercel.app/) 👈
+
+---
+
 ## 🚀 What’s Inside?
 
 - **Projects:** Real-world apps I’ve built with React, Next.js, TypeScript, and more.
