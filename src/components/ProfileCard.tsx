@@ -1,6 +1,5 @@
 import {
   EnvelopeIcon
- 
 } from "@heroicons/react/24/outline";
 import { FaLinkedin, FaGithub, FaTelegram } from "react-icons/fa";
 
@@ -30,19 +29,15 @@ export default function ProfileCard() {
     md:h-[560px]
   "
       >
-
-
         {/* avatar */}
         <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10">
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0d0f12] via-[#16181c] to-[#0d0f12]" />
 
           <img
-            src="public/ppp.png" // use your path
+            src="public/ppp.png"
             alt="Fatemeh Nikookar portrait"
             className="h-52 w-full object-cover"
           />
-
-
         </div>
 
         {/* name */}
@@ -50,18 +45,12 @@ export default function ProfileCard() {
           Fatemeh Nikookar
         </h2>
 
-        {/*         
-        <p className="mt-1 text-center text-sm text-gray-400">
-          Frontend Developer (React)
-        </p> */}
-
-        {/* contact details */}
+        {/* email */}
         <div className="mt-4 space-y-1 text-center text-sm">
           <p className="inline-flex items-center gap-2 text-gray-300">
             <EnvelopeIcon className="h-4 w-4" />
             fatemehnikookar2020@gmail.com
           </p>
-
         </div>
 
         {/* socials */}
@@ -74,7 +63,7 @@ export default function ProfileCard() {
                bg-black/40 text-gray-200    
                hover:bg-black/80 transition"
           >
-            <FaLinkedin />
+            <FaLinkedin className="h-6 w-6" />
           </a>
 
           <a
@@ -85,21 +74,21 @@ export default function ProfileCard() {
                bg-black/40 text-gray-200 
                hover:bg-black/80  transition"
           >
-            <FaGithub />
+            <FaGithub className="h-6 w-6" />
           </a>
 
           <a
-            href="#"
+            href="https://t.me/Fatemeh_Nikookar"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full 
                bg-black/40 text-gray-200
                hover:bg-black/80 transition  "
           >
-            <FaTelegram />
+            <FaTelegram className="h-6 w-6" />
           </a>
-        </div>
 
+        </div>
 
         {/* action */}
         <div className="mt-6">
@@ -119,8 +108,6 @@ export default function ProfileCard() {
             aria-label="Go to contact section"
           >
             <span className="pl-1">Get Started</span>
-
-            {/* right round arrow */}
             <span
               className="
         ml-3 grid h-10 w-10 place-items-center rounded-full
@@ -131,14 +118,18 @@ export default function ProfileCard() {
       "
               aria-hidden="true"
             >
-              {/* arrow icon */}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M7 17L17 7M9 7h8v8"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </span>
           </a>
         </div>
-
       </div>
     </aside>
   );
