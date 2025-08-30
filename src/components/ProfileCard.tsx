@@ -34,8 +34,8 @@ export default function ProfileCard() {
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0d0f12] via-[#16181c] to-[#0d0f12]" />
 
           <img
-            src="public/ppp.png"
-            alt="Fatemeh Nikookar portrait"
+            src="/ppp.png"
+            alt="Fatemeh Nikookar"
             className="h-52 w-full object-cover"
           />
         </div>
