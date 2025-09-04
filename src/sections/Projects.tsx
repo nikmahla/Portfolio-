@@ -8,40 +8,39 @@ type Project = {
   tags?: string[];
   href?: string;
 };
-
 const projects: Project[] = [
   {
     title: "Annahal Shop",
     subtitle: "Next.js Storefront",
-    img: "/cover/shopping.webp",
+    img: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&&w=1600&h=900&q=80",
     tags: ["Next.js", "React", "Zustand", "Responsive"],
     href: "https://github.com/nikmahla/annahal-shop",
   },
   {
     title: "Employee Dashboard",
     subtitle: "CRUD • Modals • Pagination",
-    img: "/cover/dashboard.webp",
+    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&h=900&q=80",
     tags: ["REST API", "Tables", "State", "JavaScript"],
     href: "https://github.com/nikmahla/Employee-Dashboard",
   },
   {
     title: "Character Explorer",
     subtitle: "Search • Filters • TS",
-    img: "/cover/charecter.webp",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&h=900&q=80",
     tags: ["TypeScript", "API", "React", "Tailwind CSS"],
     href: "https://github.com/nikmahla/CharacterExplorer",
   },
   {
     title: "Credit Card",
     subtitle: "Form UX • Live Preview",
-    img: "public/cover/credit02.webp",
+    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&h=900&q=80",
     tags: ["HTML", "Tailwind CSS", "JavaScript"],
     href: "https://github.com/nikmahla/Credit-Card",
   },
   {
     title: "Company Template",
     subtitle: "Responsive Website",
-    img: "/cover/company.webp",
+    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&h=900&q=80",
     tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     href: "https://github.com/nikmahla/WebTemplate-Company",
   },
