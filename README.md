@@ -24,9 +24,6 @@ This is where I share my favorite projects, my skills, and a bit about myself as
 - React & Next.js
 - TypeScript & JavaScript
 - Tailwind CSS
-- Zustand, Redux Toolkit
-- REST APIs
-
 ---
 
 ## 📸 Sneak Peek
