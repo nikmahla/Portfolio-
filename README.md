@@ -65,7 +65,7 @@ Open [http://localhost:5173](http://localhost:5173)
 - [LinkedIn](https://www.linkedin.com/in/fatemeh-nikookar-b00a28291/)
 - [GitHub](https://github.com/nikmahla)
 - [Telegram](https://t.me/Fatemeh_Nikookar)
-- 📧 ft.nikookar@gmail.com
+- ft.nikookar@gmail.com
 ---
 
 Thanks for stopping by!  
