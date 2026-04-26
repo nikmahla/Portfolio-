@@ -1,7 +1,9 @@
-# 👋 Hi, I’m Fatemeh Nikookar
+# Fatemeh Nikookar — Frontend Developer Portfolio
 
-Welcome to my portfolio!  
-This is where I share my favorite projects, my skills, and a bit about myself as a front-end developer.
+A personal portfolio built with Next.js, TypeScript, and Tailwind CSS,
+showcasing my projects, skills, and experience as a React & Next.js developer.
+
+👉 [Live Demo](https://portfolio-mu-sable-67.vercel.app/)
 
 ---
 
@@ -18,12 +20,22 @@ This is where I share my favorite projects, my skills, and a bit about myself as
 - **Contact:** Want to chat or collaborate? My inbox is open!
 
 ---
+## Features
 
-## 🛠️ Tech Stack
+- Fully responsive design — mobile, tablet, and desktop
+- Project showcase with live demo links
+- Clean component architecture with reusable UI elements
+- Fast load times with Next.js optimization
 
-- React & Next.js
-- TypeScript & JavaScript
-- Tailwind CSS
+
+---
+## Tech Stack
+
+- **Framework:** Next.js, React
+- **Language:** TypeScript, JavaScript (ES6+)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+
 ---
 
 ## 📸 Sneak Peek
@@ -36,22 +48,15 @@ This is where I share my favorite projects, my skills, and a bit about myself as
 
 ## 🏃‍♀️ Run It Locally
 
-1. **Clone this repo:**
-   ```sh
-   git clone https://github.com/nikmahla/Portfolio-.git
-   cd Portfolio-
-   ```
 
-2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
+```bash
+git clone https://github.com/nikmahla/Portfolio-.git
+cd Portfolio-
+npm install
+npm run dev
+```
 
-3. **Start the dev server:**
-   ```sh
-   npm run dev
-   ```
-   Then open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173](http://localhost:5173)
 
 ---
 
@@ -60,8 +65,7 @@ This is where I share my favorite projects, my skills, and a bit about myself as
 - [LinkedIn](https://www.linkedin.com/in/fatemeh-nikookar-b00a28291/)
 - [GitHub](https://github.com/nikmahla)
 - [Telegram](https://t.me/Fatemeh_Nikookar)
-- Email: fatemehnikookar2020@gmail.com
-
+- 📧 ft.nikookar@gmail.com
 ---
 
 Thanks for stopping by!  
